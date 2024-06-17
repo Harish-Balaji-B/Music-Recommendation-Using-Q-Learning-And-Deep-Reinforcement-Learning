@@ -37,3 +37,17 @@ Both methods use a reward function to guide learning based on user preferences:
 <strong>Q-Learning: </strong> 
 * The agent learns to recommend songs by the preferred artist within the specified danceability range, but its performance is sensitive to the initial exploration rate and the chosen state representation.
 * For 100 episodes – Loss trend over episodes:
+![lmao](https://github.com/Harish-Balaji-B/Music-Recommendation-Using-Q-Learning-And-Deep-Reinforcement-Learning/blob/main/Results/loss_q.png)<br>
+![lmao](https://github.com/Harish-Balaji-B/Music-Recommendation-Using-Q-Learning-And-Deep-Reinforcement-Learning/blob/main/Results/q.png)<br>
+
+* It recommends the songs based on the user’s given parameters which are:
+  * Artist Name
+  * Genre of Music
+  * Danceability
+* The model recommends music based on this. If the user presses Dislike, the model recommends another song based on the preferences. It goes on until the user presses Like or there are no more songs to recommend in that preference. If there are no songs in that preference, the model asks to change the preference. It also gives a preview to the song. But this model is not complex and cannot handle complex data.
+
+<strong>Deep Reinforcement Learning (Dueling DQN): </strong> 
+* The network effectively learns to predict Q-values and recommends songs that align with user preferences, showing a clear improvement in loss over training episodes.
+* For 10 episodes – Loss trend over episodes:
+![lmao](https://github.com/Harish-Balaji-B/Music-Recommendation-Using-Q-Learning-And-Deep-Reinforcement-Learning/blob/main/Results/loss_q.png)<br>
+![lmao](https://github.com/Harish-Balaji-B/Music-Recommendation-Using-Q-Learning-And-Deep-Reinforcement-Learning/blob/main/Results/q.png)<br>
