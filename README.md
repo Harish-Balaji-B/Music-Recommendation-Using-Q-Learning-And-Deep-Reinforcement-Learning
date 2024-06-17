@@ -49,5 +49,18 @@ Both methods use a reward function to guide learning based on user preferences:
 <strong>Deep Reinforcement Learning (Dueling DQN): </strong> 
 * The network effectively learns to predict Q-values and recommends songs that align with user preferences, showing a clear improvement in loss over training episodes.
 * For 10 episodes – Loss trend over episodes:
-![lmao](https://github.com/Harish-Balaji-B/Music-Recommendation-Using-Q-Learning-And-Deep-Reinforcement-Learning/blob/main/Results/loss_q.png)<br>
-![lmao](https://github.com/Harish-Balaji-B/Music-Recommendation-Using-Q-Learning-And-Deep-Reinforcement-Learning/blob/main/Results/q.png)<br>
+![lmao](https://github.com/Harish-Balaji-B/Music-Recommendation-Using-Q-Learning-And-Deep-Reinforcement-Learning/blob/main/Results/loss_dqn.png)<br>
+![lmao](https://github.com/Harish-Balaji-B/Music-Recommendation-Using-Q-Learning-And-Deep-Reinforcement-Learning/blob/main/Results/dqn.png)<br>
+
+* It recommends the songs based on the user’s given parameters which are:
+  * Artist Name
+  * Genre of Music
+  * Danceability
+* The model recommends music based on this. If the user presses Dislike, the model recommends another song based on the preferences. It goes on until the user presses Like or there are no more songs to recommend in that preference. If there are no songs in that preference, the model asks to change the preference. It also gives a preview to the song. This model is complex and handle complex data.
+
+### Future Work
+* <strong>Improve Q-Learning:</strong> Explore more sophisticated state representations and tune hyperparameters to enhance performance
+* <strong>Explore Other Deep RL Methods:</strong> Experiment with other DQN variants, such as Double DQN or Prioritized Experience Replay.
+* <strong>Personalized Rewards:</strong> Implement personalized reward functions to capture diverse user preferences beyond just artist preference.
+* <strong>Real-Time Learning:</strong> Investigate the use of real-time feedback from users to continuously improve recommendations.
+* <strong>Integrating with Music Generation:</strong> Try to integrate this with music generation so that if the user does not like the music recommended, the model can generate music based on the user’s preferences.
