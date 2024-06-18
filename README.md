@@ -1,14 +1,14 @@
 # Music Recommendation Using Q-Learning And Deep Reinforcement Learning
 
-### Introduction
+## Introduction
 Music recommendation systems are crucial for providing personalized experiences in streaming platforms. Traditional approaches often rely on collaborative filtering or content based methods, which may not always capture the nuanced preferences of individual users. Reinforcement learning offers a powerful alternative by allowing the system to learn from user feedback and adapt its recommendations over time.
 
-### Dataset
+## Dataset
 The music recommendation system was evaluated on a dataset comprising 228 unique artists and 7 different genres. Each song in the dataset was characterized by 17 features.
 
 The dataset was carefully curated to encompass a diverse range of music styles and artist popularity, providing a realistic testbed for music recommendation algorithms. The use of this dataset allowed for an evaluation of how well the algorithms could learn from diverse musical preferences and recommend songs that align with a user’s specific tastes.
 
-### Methodology
+## Methodology
 <strong>Q-Learning</strong>
 * A Q-learning agent with a Q-table is used to learn optimal actions (like or dislike) based on the state representation of each track.
 * The state representation is derived from a combination of GenreID, ArtistID, and TrackID, hashed to reduce the dimensionality.
@@ -24,16 +24,16 @@ The dataset was carefully curated to encompass a diverse range of music styles a
 * The target network is updated periodically to reduce oscillations during training.
 * The agent explores the action space using an epsilon-greedy strategy.
 
-### Why the Methodology
+## Why the Methodology
 * <strong>Q-Learning: </strong> Relatively simple and computationally efficient, suitable for smaller datasets and exploring the impact of state representation.
 * <strong>Deep Reinforcement Learning (Dueling DQN): </strong> More sophisticated approach that can handle complex, high-dimensional state spaces and potentially achieve better performance in large datasets.
 
-### Reward
+## Reward
 Both methods use a reward function to guide learning based on user preferences:
 * <strong>Q-Learning: </strong> The reward is based on a combination of artist preference, genre preference, and danceability range.
 * <strong>Deep Reinforcement Learning (Dueling DQN): </strong> The reward is based on a combination of artist preference, genre preference, and danceability range.
 
-### Results
+## Results
 <strong>Q-Learning: </strong> 
 * The agent learns to recommend songs by the preferred artist within the specified danceability range, but its performance is sensitive to the initial exploration rate and the chosen state representation.
 * For 100 episodes – Loss trend over episodes:
@@ -58,7 +58,7 @@ Both methods use a reward function to guide learning based on user preferences:
   * Danceability
 * The model recommends music based on this. If the user presses Dislike, the model recommends another song based on the preferences. It goes on until the user presses Like or there are no more songs to recommend in that preference. If there are no songs in that preference, the model asks to change the preference. It also gives a preview to the song. This model is complex and handle complex data.
 
-### Future Work
+## Future Work
 * <strong>Improve Q-Learning:</strong> Explore more sophisticated state representations and tune hyperparameters to enhance performance
 * <strong>Explore Other Deep RL Methods:</strong> Experiment with other DQN variants, such as Double DQN or Prioritized Experience Replay.
 * <strong>Personalized Rewards:</strong> Implement personalized reward functions to capture diverse user preferences beyond just artist preference.
